@@ -1,0 +1,19 @@
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 2rem;
+
+    
+}
+.logo-box{
+    display: flex;
+    width: 200px;
+    height: auto;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+}
