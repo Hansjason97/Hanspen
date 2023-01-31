@@ -1,0 +1,65 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.contact{
+    @include gradient;
+}
+.formhere{
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+	&+.input {
+		margin-top: 1.5rem;
+	}
+}
+
+.input-label {
+	color: $gray-400;
+	position: absolute;
+	top: 1.5rem;
+	transition: .25s ease;
+}
+
+.input-field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid rgba($gray-200, 0.2); 
+	font: inherit;
+	font-size: 1.125rem;
+	padding: .25rem 0;
+    color: $white;
+	&:focus, &:valid {
+		outline: 0;
+		border-bottom-color: $gray-200;
+		&+.input-label {
+			transform: translateY(-1.5rem);
+		}
+	}
+}
+
+textarea{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba($gray-200, 0.2);
+    font-size: 18px;
+    color: inherit;
+    padding: 0.5rem;
+
+    &::placeholder{
+        color: rgba($gray-200, 0.5);
+        font-size: 1.125rem;
+    }
+    
+    &:focus{
+        outline: none;
+        border-bottom: 2px solid $white;
+    }
+}

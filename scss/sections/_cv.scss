@@ -1,0 +1,103 @@
+@use '../custom' as *;
+
+.tab-wrapper {
+    background-color: $white;
+    /* border-radius: 10px; */
+    margin-bottom: 10px;
+    // box-shadow: 0 0 10px rgba($black, 0.1);
+    border: 1px solid $gray-200;
+  }
+  .tab-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $gray-200;
+  }
+  
+  .tab-header .tab-btn {
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 600;
+    z-index: 1;
+    /* border: 1px solid $primary; */
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  .tab-header .tab-btn:focus {
+    outline: none;
+  }
+
+  .tab-header .tab-btn:hover,
+  .tab-header .tab-btn.active {
+    color: $primary;
+  }
+  
+  .tab-header .underline {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transform-origin: left;
+    background-color: $primary;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-body {
+    display: flex;
+    overflow: hidden;
+  }
+  .tab-body .tab-content {
+    min-width: 100%;
+    padding: 20px;
+    font-size: .9rem;
+    transition: all 0.3s;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tab-header[full-width] .tab-btn {
+    flex: 1;
+    text-align: center;
+  }
+  .tab-header[bordure] .tab-btn {
+    border: 1px solid $gray-200;
+  }
+  .tab-header[bordure] .tab-btn.active {
+    border: 1px solid $primary;
+  }
+  .tab-header[bordure] .tab-btn.active {
+    color: $white;
+  }
+  .tab-header[bordure] .underline {
+    height: 100%;
+    bottom: 0;
+  }
+  .list-cv{
+    span{
+        margin-left: 1rem;
+    }
+    span[bold]{
+        font-weight: 700;
+    }
+    li{
+        margin-bottom: .9rem;
+    }
+    li::marker{
+        content: "✪";
+        color: $primary;
+      }
+    p{
+        margin-left: 1rem;
+    }
+
+  } 
+  .photo{
+    border-radius: 50%;
+    max-height: 100px;
+    margin: 1rem auto;
+  }

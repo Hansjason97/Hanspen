@@ -36,3 +36,33 @@
     margin: 0 auto;
     background-color: $primary;
 }
+.heading-line2::before{
+    content:"";
+    width: 15rem;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $gray-200;
+}
+.heading-line2::after{
+    content:"";
+    width: 2rem;
+    height: 0.5rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $gray-200;
+}
+
+.display-3{
+    font-family: 'Poppins', sans-serif;
+
+    &--title{
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        display: inline-block;
+        background-image: linear-gradient(to right, $primary, $secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

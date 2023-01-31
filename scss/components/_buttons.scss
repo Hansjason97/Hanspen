@@ -33,8 +33,25 @@
             background-color: rgba($black, 0.6);
         }
     }
+    
+}
+.btn-no-sm{
     @include media-breakpoint-down(sm){
         display: none;
     }
 }
+.btn-rounded-2{
+    padding: 1rem 3rem;
+    font-weight: 700;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: $white;
+    color: $primary;
+    margin: 0 auto;
+    width: min-content;
+    border-radius: 3rem;
 
+    &:hover{
+        background: transparent;
+        border: 1px solid $white;
+    }
+}
